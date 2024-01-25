@@ -1,5 +1,5 @@
 import dash
-dash.register_page(__name__, path="/", title="Динамика по списку тикеров", image_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgnlpGRnihSic5CCckbfsa684_6kAlqFT7hYgwgHrFog&s")
+dash.register_page(__name__, path="/")
 
 from dash import dcc, html, callback, Input, Output, State
 import yfinance as yf
@@ -29,8 +29,8 @@ for tic in nsdq.index:
 # OR: options.append({'label':'{} {}'.format(tic, nsdq.loc[tic]['Name']),'value':tic})
 
 layout = html.Div([
-            html.H1('Stock Ticker Dashboard'),
-            html.Div([html.H3('Select stock symbols:', style={'paddingRight':'30px'}),
+            html.H1('Динамика тикеров'),
+            html.Div([html.H3('Введите тикер:', style={'paddingRight':'30px'}),
             dcc.Dropdown(
                 id='pick',
                 options=options,
@@ -38,7 +38,7 @@ layout = html.Div([
                 multi=True
             )
             ], style={'display':'inline-block', 'verticalAlign':'top','width':'40%'}),
-            html.Div([html.H3('Select a start and end date:'),
+            html.Div([html.H3('Выберите период:'),
                       dcc.DatePickerRange(id='pick-a-date',
                                           min_date_allowed='2015-1-1',
                                           max_date_allowed =datetime.today(),

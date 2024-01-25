@@ -1,6 +1,6 @@
 import dash
 
-dash.register_page(__name__)
+dash.register_page(__name__, image="assets/logo.png")
 
 from dash import dcc, html, callback, Input, Output, State
 import yfinance as yf
