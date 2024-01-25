@@ -2,6 +2,7 @@ import dash
 dash.register_page(__name__, path="/")
 
 from dash import dcc, html, callback, Input, Output, State
+import plotly.graph_objs as go
 import yfinance as yf
 from datetime import datetime
 import pandas as pd
