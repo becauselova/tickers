@@ -31,4 +31,4 @@ app.layout=dbc.Container(
 )
 
 if __name__ == '__main__':
-    app.run_server(debug=False, use_reloader=True)
+    app.run_server(debug=False, use_reloader=True, port = 8070)
