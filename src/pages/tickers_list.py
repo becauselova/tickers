@@ -55,7 +55,8 @@ layout = html.Div([
             dcc.Graph(id='diagram',
                         figure={'data':[
                             {'x': [1,2], 'y':[3,1]}
-                        ]
+                        ],
+                        'layout':go.Layout(xaxis={'title':'период'}, yaxis={'title':'USD/акция'})
                     }
                 )
             ])

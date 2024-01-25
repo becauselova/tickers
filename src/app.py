@@ -4,7 +4,7 @@ import dash_auth
 
 USERNAME_PASSWORD_PAIRS=[['username', 'password'], ['623', '63']]
 
-app = dash.Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.ZEPHYR])
+app = dash.Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 dash_auth.BasicAuth(app, USERNAME_PASSWORD_PAIRS)
 
