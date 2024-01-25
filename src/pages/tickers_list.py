@@ -2,7 +2,6 @@ import dash
 dash.register_page(__name__, path="/")
 
 from dash import dcc, html, callback, Input, Output, State
-import plotly.graph_objs as go
 import yfinance as yf
 from datetime import datetime
 import pandas as pd
@@ -15,7 +14,7 @@ import pathlib
 # get relative data folder
 PATH = pathlib.Path(__file__).parent
 DATA_PATH = PATH.joinpath("../dataset").resolve()
-nsdq = pd.read_csv(DATA_PATH.joinpath("NASDAQcompanylist.csv"))  # GregorySmith Kaggle
+nsdq = pd.read_csv(DATA_PATH.joinpath("NASDAQcompanylist.csv"))
 nsdq.set_index('Symbol', inplace=True)
 
 print(nsdq.head())
@@ -57,7 +56,6 @@ layout = html.Div([
                         figure={'data':[
                             {'x': [1,2], 'y':[3,1]}
                         ],
-                        'layout':go.Layout(xaxis={'title':'период'}, yaxis={'title':'USD/акция'})
                     }
                 )
             ])
