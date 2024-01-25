@@ -49,7 +49,7 @@ layout = html.Div([
             html.Div([
                     html.Button(id='push-button',
                                 n_clicks=0,
-                                children='Show',
+                                children='OK',
                                 style={'fontSize': 24,'marginLeft':'30px'})
             ], style ={'display':'inline-block'}),
             dcc.Graph(id='diagram',

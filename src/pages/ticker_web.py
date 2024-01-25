@@ -14,7 +14,7 @@ layout =html.Div([
                   id='my_stock_picker',
                   value='TSLA',
                   multiple=True,
-                  style={'fontSize': 25, 'width': 75}
+                  style={'fontSize': 20, 'width': 75}
               )), style={'display': 'inline-block', 'verticalAlign': 'top', 'color': 'blue', 'marginLeft': '10px'}),
             html.Div([html.H3('Выберите период:'),
                       dcc.DatePickerRange(id='my_date_picker',
