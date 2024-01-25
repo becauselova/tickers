@@ -1,5 +1,5 @@
 import dash
-dash.register_page(__name__, path="/")
+dash.register_page(__name__, path="/", title="Динамика по списку тикеров", image_url = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgnlpGRnihSic5CCckbfsa684_6kAlqFT7hYgwgHrFog&s")
 
 from dash import dcc, html, callback, Input, Output, State
 import yfinance as yf
