@@ -17,7 +17,7 @@ navbar = dbc.NavbarSimple(
          if page["module"]!="pages.not_found_404"
         ],
     nav=True,
-    label="More pages",
+    label="Разделы",
     ),
     brand="Многостраничное приложение Demo",
     color="primary",
@@ -31,4 +31,4 @@ app.layout=dbc.Container(
 )
 
 if __name__ == '__main__':
-    app.run_server(debug=False, use_reloader=True)
+    app.run_server(debug=True, use_reloader=True)

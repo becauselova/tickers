@@ -1,6 +1,6 @@
 import dash
 
-dash.register_page(__name__, image= "logo.png")
+dash.register_page(__name__)
 
 from dash import dcc, html, callback, Input, Output, State
 import yfinance as yf
@@ -25,7 +25,7 @@ layout =html.Div([
                                           end_date=datetime.today(),
                                           with_portal = True
                                           )
-                      ], style={'width': '50%', 'color': 'green',
+                      ], style={'width': '80%', 'color': 'green',
                                 'display':'inline-block', 'padding-bottom': '2%'}),
     # https://community.plotly.com/t/dash-timepicker/6541
             html.Div([
