@@ -4,7 +4,7 @@ import dash_auth
 
 USERNAME_PASSWORD_PAIRS=[['username', 'password'], ['623', '63']]
 
-app = dash.Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(__name__, use_pages=True, external_stylesheets=[dbc.themes.SKETCHY])
 
 dash_auth.BasicAuth(app, USERNAME_PASSWORD_PAIRS)
 
@@ -19,7 +19,7 @@ navbar = dbc.NavbarSimple(
     nav=True,
     label="More pages",
     ),
-    brand="Multipage App Demo",
+    brand="Многостраничное приложение Demo",
     color="primary",
     dark="True",
     className="mb-2",
@@ -31,4 +31,4 @@ app.layout=dbc.Container(
 )
 
 if __name__ == '__main__':
-    app.run_server(debug=False, use_reloader=True, port = 8070)
+    app.run_server(debug=False, use_reloader=True)
