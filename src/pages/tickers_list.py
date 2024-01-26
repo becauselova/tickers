@@ -40,11 +40,12 @@ layout = html.Div([
             ], style={'display':'inline-block', 'verticalAlign':'top','width':'40%'}),
             html.Div([html.H3('Выберите период:'),
                       dcc.DatePickerRange(id='pick-a-date',
+                                          initial_visible_month = datetime.today(), #ОБЯЗАТЕЛЬНО ДЛЯ ОТОБРАЖЕНИЯ НА MCOS
                                           min_date_allowed='2015-1-1',
                                           max_date_allowed =datetime.today(),
                                           start_date='2020-1-1',
                                           end_date=datetime.today(),
-                                          with_portal = True
+                                          with_portal = True #ОБЯЗАТЕЛЬНО ДЛЯ ОТОБРАЖЕНИЯ НА MCOS
                                           )
                       ], style={'display':'inline-block'}),
             html.Div([

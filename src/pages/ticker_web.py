@@ -18,12 +18,12 @@ layout =html.Div([
               )), style={'display': 'inline-block', 'verticalAlign': 'top', 'color': 'blue', 'marginLeft': '10px'}),
             html.Div([html.H3('Выберите период:'),
                       dcc.DatePickerRange(id='my_date_picker',
-                                          initial_visible_month = datetime.today(),
+                                          initial_visible_month = datetime.today(), #ОБЯЗАТЕЛЬНО ДЛЯ ОТОБРАЖЕНИЯ НА MCOS
                                           min_date_allowed='2015-1-1',
                                           max_date_allowed =datetime.today(),
                                           start_date='2020-1-1',
                                           end_date=datetime.today(),
-                                          with_portal = True
+                                          with_portal = True #ОБЯЗАТЕЛЬНО ДЛЯ ОТОБРАЖЕНИЯ НА MCOS
                                           )
                       ], style={'width': '80%', 'color': 'green',
                                 'display':'inline-block', 'padding-bottom': '2%'}),
