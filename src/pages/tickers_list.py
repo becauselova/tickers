@@ -43,7 +43,8 @@ layout = html.Div([
                                           min_date_allowed='2015-1-1',
                                           max_date_allowed =datetime.today(),
                                           start_date='2020-1-1',
-                                          end_date=datetime.today()
+                                          end_date=datetime.today(),
+                                          with_portal = True
                                           )
                       ], style={'display':'inline-block'}),
             html.Div([
